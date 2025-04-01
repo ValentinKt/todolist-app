@@ -1,0 +1,1 @@
+// Auto-generated placeholder for frontend/components/ui/ProgressHeader.vue

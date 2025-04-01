@@ -1,0 +1,126 @@
+/* frontend/assets/styles/global.css */
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --primary: 79 70 229;    /* indigo-600 */
+  --success: 16 185 129;   /* emerald-500 */
+  --danger: 239 68 68;     /* red-500 */
+  --warning: 245 158 11;   /* amber-500 */
+  --background: 249 250 251; /* gray-50 */
+  --foreground: 17 24 39;  /* gray-900 */
+}
+
+.dark {
+  --background: 17 24 39;  /* gray-900 */
+  --foreground: 249 250 251; /* gray-50 */
+}
+
+
+
+/* Base transition class for consistency */
+.transition-normal {
+  @apply transition-all duration-200 ease-out;
+}
+
+/* Common form styling */
+.input-base {
+  @apply w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600
+  bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200
+  focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-normal;
+}
+
+/* Custom button variants as component classes */
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 rounded-lg bg-primary-600 text-white
+    hover:bg-primary-700 active:bg-primary-800 transition-normal
+    focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200
+    hover:bg-gray-300 dark:hover:bg-gray-600 transition-normal
+    focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+
+  .btn-danger {
+    @apply px-4 py-2 rounded-lg bg-red-600 text-white
+    hover:bg-red-700 active:bg-red-800 transition-normal
+    focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+  }
+}
+
+/* Global utility classes */
+.card {
+  @apply bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6
+  border border-gray-200 dark:border-gray-700;
+}
+
+
+/* Base transitions */
+* {
+  @apply transition-colors duration-200 ease-out;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition-all;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full hover:bg-gray-400 dark:hover:bg-gray-500;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-primary-500/20 text-primary-600 dark:text-primary-400;
+}
+
+/* Focus styles */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-primary-500;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Toast animations */
+.toast-enter-active {
+  animation: fadeIn 0.3s ease-out;
+}
+.toast-leave-active {
+  transition: opacity 0.3s ease-in;
+}
+.toast-leave-to {
+  opacity: 0;
+}
+
+/* Gradient text */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600;
+}
+
+/* For dark mode toggle transition */
+html.dark {
+  @apply transition-colors duration-300;
+}

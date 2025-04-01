@@ -1,0 +1,109 @@
+# Node.js
+node_modules/
+.npm
+.pnpm
+.yarn-integrity
+*.tgz
+
+# Nuxt.js
+.nuxt/
+.output/
+.nitro/
+.cache/
+dist/
+
+# PocketBase
+backend/pb_data/
+backend/pb_public/
+backend/pb_migrations/*.json
+!backend/pb_migrations/*.ts
+*.pb_backup
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE and Editor
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# TypeScript cache
+.tscache/
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Optional browserslist cache
+.browserslistrc
+
+# Optional turbo cache
+.turbo/
+
+# Optional pnpm debug
+.pnpm-debug.log
+
+# Local development files
+*.local
+
+# Logs
+logs/
+*.log
+
+# macOS
+._*
+
+# Windows
+[Tt]humbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Backup files
+*.bak
+*.tmp
+*.orig
+*.bkp
+*.old
+*.sav
+
+# Debug files
+*.log
+*.pid
+*.seed
+*.pid.lock
