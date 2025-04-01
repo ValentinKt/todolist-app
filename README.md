@@ -24,6 +24,7 @@ A modern, realtime todo list application with authentication, drag & drop, and c
 
 1. Install dependencies:
 
+```plaintext
 todolist-app
 ├── assets
 │   └── icons
@@ -101,3 +102,5 @@ todolist-app
 ├── tailwind.config.js
 ├── tests
 └── tsconfig.json
+```
+
