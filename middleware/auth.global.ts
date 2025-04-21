@@ -1,4 +1,8 @@
 // frontend/middleware/auth.global.ts
+
+import { defineNuxtRouteMiddleware } from '#app'
+import { usePocketBase }  from '~/composables/api/usePocketBase'
+
 export default defineNuxtRouteMiddleware(async (to) => {
   const pb = usePocketBase()
 

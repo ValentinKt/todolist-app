@@ -34,7 +34,7 @@ export interface Notification {
   timeout?: number
 }
 
-export interface Achievement {
+export interface TodoAchievement {
   type: 'milestone' | 'streak' | 'productivity'
   title: string
   message: string

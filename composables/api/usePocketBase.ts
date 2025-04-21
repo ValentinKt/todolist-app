@@ -29,7 +29,7 @@ export const usePocketBase = () => {
 
     if (!pb.authStore.isValid) {
       // Redirect to login if token becomes invalid
-      if (pb.client && !['/login', '/signup'].includes(window.location.pathname)) {
+      if (!['/login', '/signup'].includes(window.location.pathname)) {
         navigateTo('/login')
       }
     }

@@ -22,14 +22,8 @@ export default defineNuxtConfig({
   // Module configurations
   colorMode: {
     preference: 'system',
-    fallback: 'dark',
-    hid: 'nuxt-color-mode-script',
-    globalName: '__NUXT_COLOR_MODE__',
-    componentName: 'ColorScheme',
-    classPrefix: '',
-    classSuffix: '-mode',
-    storage: 'localStorage',
-    storageKey: 'nuxt-color-mode'
+    fallback: 'light',
+    classSuffix: '',
   },
 
   // Runtime configuration - available in application
@@ -69,7 +63,7 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
     typeCheck: true,
-    shim: false
+    shim: true
   },
 
   // App configuration
